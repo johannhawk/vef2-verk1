@@ -1,18 +1,8 @@
 import fs from "node:fs/promises";
 import { parseLine } from "./lib/parse.js";
+import { generateQuestionCategoryHtml, generateQuestionHtml } from "./lib/html.js";
 
 const MAX_QUESTIONS_PER_CATEGORY = 100;
-
-function generateQuestionHtml(q) {
-
-  const html = `
-    <section>
-      <h3>${q.question}</h3>
-      <p>${q.answer}</p>
-    </section>`;
-
-  return html
-}
 
 async function main() {
   // Búa til dist möppu ef ekki til
@@ -30,7 +20,9 @@ async function main() {
     .slice(0, MAX_QUESTIONS_PER_CATEGORY);
 
   //const output = generateQuestionHtml(qualityHistoryQuestions[0]);
-const output = qualityHistoryQuestions.map(generateQuestionHtml).join('\n')
+const questionsHtml = qualityHistoryQuestions.map(generateQuestionHtml).join('\n')
+
+const output = generateQuestionCategoryHtml('Saga', questionsHtml);
 
   const path = "./dist/saga.html";
 
