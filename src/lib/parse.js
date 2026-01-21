@@ -29,7 +29,7 @@ export function parseQuestions() {
 export function parseLine(line) {
   const split = line.split(",");
 
-  if (split.length !== 5) {
+  if (split.length !== 6) {
     return null
   }
 

@@ -3,8 +3,6 @@ import { parseLine } from "./lib/parse.js";
 
 const MAX_QUESTIONS_PER_CATEGORY = 100;
 
-const foo = 1;
-
 function generateQuestionHtml(q) {
 
   const html = `
