@@ -21,8 +21,8 @@ export function generateQuestionHtml(q) {
   const html = /* HTML */ ` <section class="question" data-answered="false">
     <h3>${q.question}</h3>
     <p>${q.answer}</p>
-    <button type="button" class="button button-correct">Rétt 🫡</button>
-    <button type="button" class="button button-incorrect">Rangt 🥹</button>
+    <button type="button" class="button button-correct">Rétt ✅</button>
+    <button type="button" class="button button-incorrect">Rangt ❌</button>
   </section>`;
 
   return html;
