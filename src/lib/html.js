@@ -7,9 +7,16 @@ export function generateIndexHtml() {
       </head>
       <body>
         <h1>Spurningaleikur!</h1>
-        <p>Velkomin velkomin! Veldu flokk til að svara spurningum í:</p>
+        <p>Velkomin.</p>
+        <p>Veldu flokk til að svara spurningum í:</p>
         <ul>
+  <li><a href="almenn.html">Almenn</a></li>
+  <li><a href="nattura.html">Náttura og vísindi</a></li>
+  <li><a href="bok.html">Bókmenntir og listir</a></li>
   <li><a href="saga.html">Saga</a></li>
+  <li><a href="landa.html">Landafræði</a></li>
+  <li><a href="skemmtun.html">Skemmtun</a></li>
+  <li><a href="ithrottir.html">Íþróttir</a></li>
 </ul>
       </body>
     </html>`;
