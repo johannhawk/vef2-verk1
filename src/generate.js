@@ -59,18 +59,22 @@ async function main() {
 
   // TODO ítra gegnum alla flokka og búa til
 
-  const questionsHtml = qualityHistoryQuestions
-    .map(generateQuestionHtml)
-    .join("\n");
+  const q1 = qualityGeneralQuestions.map(generateQuestionHtml).join("\n");
+  const q2 = qualityNatureQuestions.map(generateQuestionHtml).join("\n");
+  const q3 = qualityArtsQuestions.map(generateQuestionHtml).join("\n");
+  const questionsHtml = qualityHistoryQuestions.map(generateQuestionHtml).join("\n");//4
+  const q5 = qualityGeoQuestions.map(generateQuestionHtml).join("\n");
+  const q6 = qualityEntertainmentQuestions.map(generateQuestionHtml).join("\n");
+  const q7 = qualitySportsQuestions.map(generateQuestionHtml).join("\n");
 
     //vantar lista til að ítra gegnum enn ég þarf að láta þetta virka fyrst -jcs
-  const o1 = generateQuestionCategoryHtml("Almenn", questionsHtml);
-  const o2 = generateQuestionCategoryHtml("Náttura og vísindi", questionsHtml);
-  const o3 = generateQuestionCategoryHtml("Bókmenntir og listir", questionsHtml);
-  const output = generateQuestionCategoryHtml("Saga", questionsHtml);
-  const o5 = generateQuestionCategoryHtml("Landafræði", questionsHtml);
-  const o6 = generateQuestionCategoryHtml("Skemmtun", questionsHtml);
-  const o7 = generateQuestionCategoryHtml("Íþróttir", questionsHtml);
+  const o1 = generateQuestionCategoryHtml("Almenn", q1);
+  const o2 = generateQuestionCategoryHtml("Náttura og vísindi", q2);
+  const o3 = generateQuestionCategoryHtml("Bókmenntir og listir", q3);
+  const output = generateQuestionCategoryHtml("Saga", questionsHtml); //4
+  const o5 = generateQuestionCategoryHtml("Landafræði", q5);
+  const o6 = generateQuestionCategoryHtml("Skemmtun", q6);
+  const o7 = generateQuestionCategoryHtml("Íþróttir", q7);
 
   const p1 = "./dist/almenn.html";
   const p2 = "./dist/nattura.html";
@@ -80,13 +84,13 @@ async function main() {
   const p6 = "./dist/skemmtun.html";
   const p7 = "./dist/ithrottir.html";
 
-  await fs.writeFile(p1, output, "utf-8");
-  await fs.writeFile(p2, output, "utf-8");
-  await fs.writeFile(p3, output, "utf-8");
+  await fs.writeFile(p1, o1, "utf-8");
+  await fs.writeFile(p2, o2, "utf-8");
+  await fs.writeFile(p3, o3, "utf-8");
   await fs.writeFile(path, output, "utf-8"); //4
-  await fs.writeFile(p5, output, "utf-8");
-  await fs.writeFile(p6, output, "utf-8");
-  await fs.writeFile(p7, output, "utf-8");
+  await fs.writeFile(p5, o5, "utf-8");
+  await fs.writeFile(p6, o6, "utf-8");
+  await fs.writeFile(p7, o7, "utf-8");
 
   // TODO gera alvoru itrun -jcs
 
