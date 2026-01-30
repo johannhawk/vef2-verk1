@@ -42,7 +42,7 @@ export function generateQuestionCategoryHtml(title, questionsHtml) {
         <script src="scripts.js" type="module"></script>
         <style>
         button {
-          justify-content: center
+          justify-content: center;
         }
         </style>
       </head>
