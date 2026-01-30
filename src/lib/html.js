@@ -42,6 +42,7 @@ export function generateQuestionCategoryHtml(title, questionsHtml) {
         <script src="scripts.js" type="module"></script>
         <style>
         .question {
+          display: flex;
           justify-content: center;
         }
         </style>
