@@ -80,7 +80,13 @@ async function main() {
   const p6 = "./dist/skemmtun.html";
   const p7 = "./dist/ithrottir.html";
 
-  await fs.writeFile(path, output, "utf-8");
+  await fs.writeFile(p1, output, "utf-8");
+  await fs.writeFile(p2, output, "utf-8");
+  await fs.writeFile(p3, output, "utf-8");
+  await fs.writeFile(path, output, "utf-8"); //4
+  await fs.writeFile(p5, output, "utf-8");
+  await fs.writeFile(p6, output, "utf-8");
+  await fs.writeFile(p7, output, "utf-8");
 
   // TODO búa til alla hina flokkana
 
