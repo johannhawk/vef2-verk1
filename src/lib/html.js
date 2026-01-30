@@ -44,6 +44,7 @@ export function generateQuestionCategoryHtml(title, questionsHtml) {
         .question button{
           display: flex;
           justify-content: center;
+          border-radius: 8px;
         }
         .button-correct{
           background-color: aquamarine;
