@@ -4,6 +4,11 @@ export function generateIndexHtml() {
       <html>
       <head>
         <script src="scripts.js" type="module"></script>
+        <style>
+        button {
+          justify-content: center
+        }
+        </style>
       </head>
       <body>
         <h1>Spurningaleikur!</h1>

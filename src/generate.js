@@ -88,7 +88,9 @@ async function main() {
   await fs.writeFile(p6, output, "utf-8");
   await fs.writeFile(p7, output, "utf-8");
 
-  // TODO búa til alla hina flokkana
+  // TODO gera alvoru itrun -jcs
+
+  //TODO gera CSS -jcs
 
   // TODO búa til index
   const indexHtml = generateIndexHtml();
