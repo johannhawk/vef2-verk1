@@ -45,6 +45,9 @@ export function generateQuestionCategoryHtml(title, questionsHtml) {
           display: flex;
           justify-content: center;
         }
+        .button-correct{
+          background-color: aquamarine;
+        }
         </style>
       </head>
       <body>
